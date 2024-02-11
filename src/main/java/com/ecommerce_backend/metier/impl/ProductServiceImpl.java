@@ -23,6 +23,18 @@ public class ProductServiceImpl implements ProductService  {
 		// TODO Auto-generated method stub
 		return productRepository.findAll();
 	}
+
+	@Override
+	public Products saveProduct(Products products) {
+		// TODO Auto-generated method stub
+		return productRepository.save(products);
+	}
+
+	@Override
+	public String deleteProduct(long id) {
+		productRepository.deleteById(id);
+		return "Produit supprimé avec succes";
+	}
 	
 	
 }

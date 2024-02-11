@@ -10,4 +10,6 @@ import com.ecommerce_backend.entities.Products;
 public interface ProductService {
 
 	List<Products> getAllProducts();
+	Products saveProduct(Products products);
+	public String deleteProduct(long id);
 }
